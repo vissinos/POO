@@ -16,4 +16,31 @@ public class Estudante {
             notas[i] = sc.nextDouble();
         }
     }
+
+    public double calculaMedia() {
+        double soma = 0;
+        for (int i = 0; i < notas.length; i++) {
+            soma = soma + notas[i];
+        }
+        return soma / notas.length;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public double[] getNotas() {
+        return notas;
+    }
+
+    public double menorNota() {
+        double menor = notas[0];
+        for (int i = 1; i < notas.length; i++) {
+            if (notas[i] < menor) {
+                menor = notas[i];
+            }
+        }
+        return menor;
+    }
 }
+ 
